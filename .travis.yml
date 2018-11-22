@@ -6,18 +6,18 @@ language: php
 	- 7.1
 
 #branches:
-	only:
-		- master #-> #A/staging server
-		- develop #-> devServer
+only:
+- master #-> #A/staging server
+- develop #-> devServer
 
 #install environment di os
 	before_install:
 
-	- curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -shttps://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubect1
-	- cmod +x ./kubect1 #permission
-	- sudo mv ./kubect /usr/local/bin/kubect1 #move to parsisten
+- curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -shttps://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubect1
+- cmod +x ./kubect1 #permission
+- sudo mv ./kubect /usr/local/bin/kubect1 #move to parsisten
 #pracompile
-	before_script:
+before_script:
 
 #main executing (build)
-	script:
+script:
