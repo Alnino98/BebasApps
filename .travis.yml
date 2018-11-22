@@ -3,4 +3,4 @@ dist: trusty
 language: php
 
 #versi php
-	- 7.1
+- 7.1
